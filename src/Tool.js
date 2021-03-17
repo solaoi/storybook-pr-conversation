@@ -4,28 +4,35 @@ import { Icons, IconButton } from "@storybook/components";
 import { TOOL_ID } from "./constants";
 
 export const Tool = () => {
-  const [{ myAddon }, updateGlobals] = useGlobals();
-
-  const toggleMyTool = useCallback(
-    () =>
-      updateGlobals({
-        myAddon: !myAddon,
-      }),
-    [myAddon]
-  );
+  const [{ showMark }, updateGlobals] = useGlobals();
+  // when you load the first time, check searchParams.
+  const searchParams = new URL(parent.location.href).searchParams;
+  if (searchParams.get("x") && searchParams.get("y")) {
+    updateGlobals({
+      showMark: true,
+    });
+  }
+  const toggleShowMark = useCallback(() => {
+    // prev state is true
+    if (showMark) {
+      const parentUrl = new URL(parent.location.href);
+      parentUrl.searchParams.delete("x");
+      parentUrl.searchParams.delete("y");
+      parent.history.pushState({}, "", parentUrl);
+    }
+    updateGlobals({
+      showMark: !showMark,
+    });
+  }, [showMark]);
 
   return (
     <IconButton
       key={TOOL_ID}
-      active={myAddon}
-      title="Enable my addon"
-      onClick={toggleMyTool}
+      active={showMark}
+      title="Enable PR Conversation"
+      onClick={toggleShowMark}
     >
-      {/*
-        Checkout https://next--storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels
-        for the full list of icons
-      */}
-      <Icons icon="lightning" />
+      <Icons icon="pullrequest" />
     </IconButton>
   );
 };
