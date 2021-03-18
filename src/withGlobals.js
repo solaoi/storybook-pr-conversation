@@ -79,8 +79,15 @@ function displayToolState(showMark) {
 
 // global func
 export const withGlobals = (StoryFn, context) => {
-  const [{ showMark }] = useGlobals();
-
+  const [{ showMark }, updateGlobals] = useGlobals();
+  useEffect(() => {
+    const searchParams = new URL(parent.location.href).searchParams;
+    if (searchParams.get("x") && searchParams.get("y")) {
+      updateGlobals({
+        showMark: true,
+      });
+    }
+  }, []);
   useEffect(() => {
     displayToolState(showMark);
   }, [showMark]);
