@@ -1,3 +1,16 @@
+# v0.0.4 (Thu Mar 18 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/solaoi/storybook-pr-conversation ([@solaoi](https://github.com/solaoi))
+- last fix maybe... ([@solaoi](https://github.com/solaoi))
+
+#### Authors: 1
+
+- solaoi ([@solaoi](https://github.com/solaoi))
+
+---
+
 # v0.0.3 (Thu Mar 18 2021)
 
 #### ⚠️ Pushed to `main`
