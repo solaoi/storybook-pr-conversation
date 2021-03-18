@@ -13,6 +13,7 @@ function createCommentMark(size, x, y) {
   const val = document.createTextNode("!");
   comment.appendChild(val);
   comment.style.setProperty("text-align", "center");
+  comment.style.setProperty("vertical-align", "middle");
   comment.style.setProperty("color", "#FFF");
   comment.style.setProperty("font-weight", "700");
 
@@ -44,8 +45,10 @@ function displayToolState(showMark) {
   if (!showMark) {
     removeCommentMark();
     rootElement.onclick = undefined;
+    rootElement.style.removeProperty("cursor");
     return;
   }
+  rootElement.style.setProperty("cursor", "pointer");
 
   if (hasPositionParams(searchParams)) {
     const comment = createCommentMark(
@@ -57,6 +60,7 @@ function displayToolState(showMark) {
   }
 
   rootElement.onclick = function (e) {
+    e.preventDefault();
     // remove previous comment mark
     removeCommentMark();
     // copy this position to paste on PR Conversation
