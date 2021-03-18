@@ -1,3 +1,15 @@
+# v0.0.5 (Thu Mar 18 2021)
+
+#### ⚠️ Pushed to `main`
+
+- production release ([@solaoi](https://github.com/solaoi))
+
+#### Authors: 1
+
+- solaoi ([@solaoi](https://github.com/solaoi))
+
+---
+
 # v0.0.4 (Thu Mar 18 2021)
 
 #### ⚠️ Pushed to `main`
