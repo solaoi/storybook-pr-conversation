@@ -12,8 +12,9 @@ function createCommentMark(size, x, y) {
   comment.className = "comment";
   const val = document.createTextNode("!");
   comment.appendChild(val);
-  comment.style.setProperty("text-align", "center");
-  comment.style.setProperty("vertical-align", "middle");
+  comment.style.setProperty("display", "flex");
+  comment.style.setProperty("justify-content", "center");
+  comment.style.setProperty("align-items", "center");
   comment.style.setProperty("color", "#FFF");
   comment.style.setProperty("font-weight", "700");
 
