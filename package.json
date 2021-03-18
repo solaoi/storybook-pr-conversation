@@ -1,11 +1,12 @@
 {
   "name": "storybook-pr-conversation",
-  "version": "0.0.4",
-  "description": "we could point out the position of a story",
+  "version": "1.0.0",
+  "description": "We could point out the position of a story, then share this with URL :)",
   "keywords": [
+    "storybook",
+    "addon",
     "storybook-addons",
-    "style",
-    "test"
+    "communication"
   ],
   "repository": {
     "type": "git",
@@ -68,8 +69,7 @@
       "vue",
       "angular",
       "html"
-    ],
-    "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+    ]
   },
   "dependencies": {
     "clipboard-copy": "^4.0.1"
