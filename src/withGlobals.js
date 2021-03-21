@@ -9,7 +9,7 @@ function hasPositionParams(searchParams) {
 
 function createCommentMark(size, x, y) {
   const comment = document.createElement("div");
-  comment.className = "comment";
+  comment.className = "storybook-pr-conversation-comment";
   const val = document.createTextNode("!");
   comment.appendChild(val);
   comment.style.setProperty("display", "flex");
@@ -33,7 +33,7 @@ function createCommentMark(size, x, y) {
 }
 
 function removeCommentMark() {
-  const commnet = document.getElementsByClassName("comment");
+  const commnet = document.getElementsByClassName("storybook-pr-conversation-comment");
   if (commnet) {
     Array.from(commnet).forEach((e) => e.remove());
   }
