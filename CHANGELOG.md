@@ -1,3 +1,15 @@
+# v1.0.2 (Tue Mar 23 2021)
+
+#### 🐛 Bug Fix
+
+- change className to unique [#2](https://github.com/solaoi/storybook-pr-conversation/pull/2) ([@solaoi](https://github.com/solaoi))
+
+#### Authors: 1
+
+- solaoi ([@solaoi](https://github.com/solaoi))
+
+---
+
 # v0.0.5 (Thu Mar 18 2021)
 
 #### ⚠️ Pushed to `main`
