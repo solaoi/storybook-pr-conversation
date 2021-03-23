@@ -9,7 +9,7 @@ function hasPositionParams(searchParams) {
 
 function createCommentMark(size, x, y) {
   const comment = document.createElement("div");
-  comment.className = "comment";
+  comment.className = "storybook-pr-conversation-comment";
   const val = document.createTextNode("!");
   comment.appendChild(val);
   comment.style.setProperty("display", "flex");
@@ -28,12 +28,13 @@ function createCommentMark(size, x, y) {
   comment.style.setProperty("position", "absolute");
   comment.style.setProperty("top", y - size / 2 + "px");
   comment.style.setProperty("left", x - size / 2 + "px");
+  comment.style.setProperty("z-index", "2147483647");
 
   return comment;
 }
 
 function removeCommentMark() {
-  const commnet = document.getElementsByClassName("comment");
+  const commnet = document.getElementsByClassName("storybook-pr-conversation-comment");
   if (commnet) {
     Array.from(commnet).forEach((e) => e.remove());
   }
