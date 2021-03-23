@@ -28,6 +28,7 @@ function createCommentMark(size, x, y) {
   comment.style.setProperty("position", "absolute");
   comment.style.setProperty("top", y - size / 2 + "px");
   comment.style.setProperty("left", x - size / 2 + "px");
+  comment.style.setProperty("z-index", "2147483647");
 
   return comment;
 }
